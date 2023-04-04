@@ -1,0 +1,91 @@
+// App.scss
+
+$green: #2e7d32;
+$dark-green: #1b5e20;
+$red: #c62828;
+$yellow: #fbc02d;
+$white: #fff;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: $dark-green;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: $green;
+    border: 10px solid $dark-green;
+    box-shadow: 0px 0px 20px $dark-green;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3rem;
+    color: $white;
+    text-shadow: 2px 2px $dark-green;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    width: 100px;
+    height: 150px;
+    margin: 10px;
+    border: 5px solid $white;
+    border-radius: 5px;
+    background-color: $white;
+    box-shadow: 2px 2px $dark-green;
+    transform: rotate(-10deg);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: $white;
+    background-color: $red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px $dark-green;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $yellow;
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+
+    &+.button {
+        margin-left: 20px;
+    }
+}
+
+.button--disabled {
+    background-color: $dark-green;
+    cursor: not-allowed;
+}
